@@ -1,0 +1,17 @@
+:root {
+/* background-color: brown; */
+height: 95vh;
+font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+color: rgb(29, 29, 29);
+margin: auto;
+box-sizing: border-box;
+display: flex;
+cursor: none;
+}
+
+body{
+ margin: 2.5vh;
+ /* border: 1px dashed white; */
+ min-height: 100%;
+ width: 100%;
+}

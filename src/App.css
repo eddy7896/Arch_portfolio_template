@@ -1,0 +1,70 @@
+.container {
+  /* background-color: blue; */
+  display: flex;
+  gap: 30px;
+  height: 95vh;
+}
+
+.NavBar {
+  /* background-color: blueviolet; */
+  text-align: center;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NavBar img {
+  width: 100px;
+  padding-top: 20px;
+}
+
+.NavBar h5 {
+  margin: 0 auto;
+}
+
+/* .NavBar button{
+    border: 0;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  } */
+.contact {
+  padding-bottom: 15px;
+}
+
+.cursor {
+  background-color: black;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.laggedCursor {
+  background-color: rgb(231, 216, 208);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  /* transition: transform 0.4s ease; */
+
+}
+
+
+
+.img-container {
+  width: 100%;
+  background-image: url("./images/img1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
