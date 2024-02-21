@@ -1,23 +1,28 @@
+/* CONTAINER */
+
 .container {
-  /* background-color: blue; */
   display: flex;
-  gap: 30px;
   height: 95vh;
+  margin-right: 2.5vw;
 }
 
+/* NAVBAR */
+
 .NavBar {
-  /* background-color: blueviolet; */
-  text-align: center;
-  min-width: 200px;
+  position:fixed;
+  bottom: 2.5vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 250px;
+  height: 95vh;
+
 }
 
 .NavBar img {
   width: 100px;
-  padding-top: 20px;
+  margin-top: 10px;
 }
 
 .NavBar h5 {
@@ -50,16 +55,11 @@
   transform: translateX(7px);
 }
 
-/* .NavBar button{
-    border: 0;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-  } */
-.contact {
-  padding-bottom: 15px;
+.home {
+  padding-bottom: 5px;
 }
+
+/* MOUSE */
 
 .cursor {
   background-color: black;
@@ -87,8 +87,17 @@
 }
 
 .img-container {
+  margin-left: 250px;
   width: 100%;
   background-image: url("./images/img1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.curriculum {
+  margin-left: 250px;
+  width: 100%;
+  background-color: rgb(221, 204, 159,0.3);
+  
   background-size: cover;
   background-repeat: no-repeat;
 }

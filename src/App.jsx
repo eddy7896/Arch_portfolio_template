@@ -4,7 +4,8 @@ import NavBar from './Components/Navbar'
 import './App.css'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-
+import HomePage from './Components/HomePage'
+import Curriculum from './Components/Curriculum'
 
 function App() {
 
@@ -52,9 +53,7 @@ function App() {
 
   return (
     <>
-
       <div className="cursor" style={{ left: mousePosition.x - 2.5, top: mousePosition.y - 2.5 }}></div>
-
       <motion.div
         className='laggedCursor'
         variants={variantsLagged}
@@ -65,17 +64,15 @@ function App() {
           restDelta: 0.001
         }}
       />
-
-      <main className='container'>
-
-        <NavBar textEnter={textEnter} textLeave={textLeave}/>
-
-        <div className="img-container">
-          {/* <img src={img1}/> */}
-
-        </div>
-
-      </main>
+       <main className='container'>
+      <NavBar textEnter={textEnter} textLeave={textLeave}/>
+       
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/curriculum" element={<Curriculum />} />
+        </Routes>
+       
+      </main> 
     </>
   )
 }
