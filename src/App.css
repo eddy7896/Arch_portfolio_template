@@ -22,6 +22,32 @@
 
 .NavBar h5 {
   margin: 0 auto;
+  position: relative;
+  padding-bottom: 0.3rem;
+  transition: 0.5s;
+}
+.NavBar a {
+  text-decoration: none;
+  color: black;
+  cursor: none;
+}
+.NavBar h5::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgb(231, 216, 208);
+  transition: width  0.25s ease-in-out;
+}
+.NavBar h5:hover::before {
+  width: 100%;
+
+}
+.NavBar h5:hover {
+  color: rgb(231, 216, 208);
+  transform: translateX(7px);
 }
 
 /* .NavBar button{
@@ -59,8 +85,6 @@
   /* transition: transform 0.4s ease; */
 
 }
-
-
 
 .img-container {
   width: 100%;
