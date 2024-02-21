@@ -5,14 +5,18 @@
     color: rgb(29, 29, 29);
     box-sizing: border-box;
     cursor: none;
+    display: flex;
 }
 
 body {
     /* border: 1px dashed rgb(207, 52, 52); */
-    margin: 2.5vh;
+    margin-top: 2.5vh;
+    margin-right: 2.5vh;
+    margin-bottom: 2.5vh;
     /* min-height: 100%; */
     width: 100%;
     overflow-x: hidden;
+    
 }
 
 * {

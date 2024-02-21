@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import HomePage from './Components/HomePage'
 import Curriculum from './Components/Curriculum'
+import LoadingScreen from './Components/LoadingScreen'
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
 
   return (
     <>
+    <LoadingScreen />
       <div className="cursor" style={{ left: mousePosition.x - 2.5, top: mousePosition.y - 2.5 }}></div>
       <motion.div
         className='laggedCursor'
