@@ -46,11 +46,22 @@ function App() {
       width: 0,
       x: mousePosition.x,
       y: mousePosition.y
+    }, 
+    click: {
+      height: 3000,
+      width: 3000,
+      x: mousePosition.x - 1500,
+      y: mousePosition.y - 1500
     }
   }
 
   const textEnter = () => setCursorVariant("text")
   const textLeave = () => setCursorVariant("default")
+  
+  const textClick = () => {
+    setCursorVariant("click")
+    return  setTimeout(()=>setCursorVariant("default"), 700);
+  }
 
   return (
     <>
@@ -67,11 +78,11 @@ function App() {
         }}
       />
        <main className='container'>
-      <NavBar textEnter={textEnter} textLeave={textLeave}/>
+      <NavBar textEnter={textEnter} textLeave={textLeave} textClick={textClick}/>
        
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/curriculum" element={<Curriculum />} />
+          <Route path="/curriculum" element={<Curriculum/>} />
         </Routes>
        
       </main> 
