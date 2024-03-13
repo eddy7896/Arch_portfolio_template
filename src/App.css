@@ -110,6 +110,7 @@
   opacity: 0;
   width: 100%;
   transition: opacity 1s ease; 
+  /* transform: translate(0%, -10%); */
   /* object-fit: cover; */
 }
 
@@ -118,6 +119,7 @@
   width: 100%;
   /* object-fit: cover; */
   transition: opacity 1s ease; 
+  /* transform: translate(0%, -10%); */
 }
 /* @keyframes slide {
   0% { transform: translateX(0); }
