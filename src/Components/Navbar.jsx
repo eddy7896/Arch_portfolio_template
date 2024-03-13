@@ -1,25 +1,85 @@
 import logo from "../images/logo.png"
-import { useState } from 'react'
-import { Link } from "react-router-dom"
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from "react-router-dom"
 import { FaRegCopy } from "react-icons/fa6";
+import { IoCloudDownloadOutline } from "react-icons/io5";
+import axios from 'axios'
+
+const NavBar = ({ textEnter, textLeave }) => {
+
+    const [displayEmail, setDisplayEmail] = useState(false);
+    const [curriculumClicked, setCurriculumClicked] = useState(false);
+    const location = useLocation();
 
 
-const NavBar = ({textEnter, textLeave, textClick}) => {
-
-    const [contact, setContact] = useState("Contact")
     
-    const handleClick = () => {
-        setContact("amcasep@gmail.com")
+
+
+
+    const handleCurriculumClick = () => {
+        setCurriculumClicked(true);
+    };
+    useEffect(() => {
+        if (location.pathname !== "/curriculum") {
+            setCurriculumClicked(false);
+        }
+    }, [location.pathname]);
+
+    const handleDownload = () => {
+
+        const url = './Lebenslauf_Amparo_Cabezuelo_Architect.pdf';
+        const fileName = 'Lebenslauf_Amparo_Cabezuelo_Architect.pdf'
+
+        axios
+            .get(url, { responseType: 'blob' })
+            .then(response => {
+                const href = window.URL.createObjectURL(new Blob([response.data]));
+                const link = document.createElement('a');
+                link.href = href;
+                link.download = fileName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            })
+            .catch(error => console.error('Error downloading file:', error));
+    };
+    const handleContactClick = () => {
+        setDisplayEmail(!displayEmail);
     }
+    const handleCopyEmail = () => {
+        navigator.clipboard.writeText("amcasep@gmail.com")
+        .then(() => {
+            console.log('Email copied to clipboard');
+        })
+        .catch(error => {
+            console.error('Error copying email to clipboard:', error);
+        });
+        handleContactClick()
+    };
 
     return (
         <div className="NavBar">
             <img src={logo} />
-            <Link to="/" className="home"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} onClick={textClick}>Home</h5></Link>
-            <Link to="/projects"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} onClick={textClick}>Projects</h5></Link>
-            <Link to="/curriculum"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} onClick={textClick}>Curriculum</h5></Link>
-            <Link to="/fotography"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} onClick={textClick}>Fotography</h5></Link>
-            <h5 className="contact" onClick={handleClick} onMouseEnter={textEnter} onMouseLeave={textLeave} >{contact}</h5>
+            <Link to="/" className="home"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Home</h5></Link>
+            <Link to="/projects"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Projects</h5></Link>
+            {curriculumClicked ? (
+                <div className="">
+                    <IoCloudDownloadOutline onClick={handleDownload} />
+                </div>
+            ) : (
+                <Link to="/curriculum" onClick={handleCurriculumClick}><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Curriculum</h5></Link>
+            )}
+            <Link to="/fotography"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Fotography</h5></Link>
+            {displayEmail ? (
+                <h5 onClick={handleCopyEmail} onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                    amcasep@gmail.com <FaRegCopy />
+                </h5>
+            ) : (
+                <h5 onClick={handleContactClick} onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                    Contact
+                </h5>
+            )}
+
         </div>
     );
 }

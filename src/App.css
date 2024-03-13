@@ -129,10 +129,12 @@
 .curriculum {
   margin-left: 250px;
   width: 100%;
-  background-color: rgb(221, 204, 159, 0.3);
-
+  overflow: hidden;
+  /* background-color: rgb(221, 204, 159, 0.3); */
+  background-image: url("./images/Lebenslauf.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  transform: translate(0%, -2%);
 }
 
 /* LOADING PAGE */

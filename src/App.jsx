@@ -7,6 +7,8 @@ import { motion } from 'framer-motion'
 import HomePage from './Components/HomePage'
 import Curriculum from './Components/Curriculum'
 import LoadingScreen from './Components/LoadingScreen'
+import Projects from './Components/Projects'
+import Fotography from './Components/Fotography'
 
 function App() {
 
@@ -58,10 +60,10 @@ function App() {
   const textEnter = () => setCursorVariant("text")
   const textLeave = () => setCursorVariant("default")
   
-  const textClick = () => {
-    setCursorVariant("click")
-    return  setTimeout(()=>setCursorVariant("default"), 700);
-  }
+  // const textClick = () => {
+  //   setCursorVariant("click")
+  //   return  setTimeout(()=>setCursorVariant("default"), 700);
+  // }
 
   return (
     <>
@@ -78,10 +80,12 @@ function App() {
         }}
       />
        <main className='container'>
-      <NavBar textEnter={textEnter} textLeave={textLeave} textClick={textClick}/>
+      <NavBar textEnter={textEnter} textLeave={textLeave}/>
        
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<Projects/>} />
+          <Route path="/fotography" element={<Fotography/>} />
           <Route path="/curriculum" element={<Curriculum/>} />
         </Routes>
        

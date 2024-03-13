@@ -14,7 +14,7 @@ import { useEffect, useState } from "react"
 
 const HomePage = () => {
         const [currentSlide, setCurrentSlide] = useState(0);
-        const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+        const images = [img4, img2, img3, img5, img6, img7, img8, img9];
 
     useEffect(() => {
         const interval = setInterval(() => {
