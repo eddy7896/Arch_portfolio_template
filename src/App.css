@@ -100,26 +100,44 @@
 
 .carousel-container {
   position: relative;
-  display: flex;
+  /* display: block; */
   /* transition: transform 1s ease; */
   /* animation: slide 15s linear infinite  */
+  width: auto;
+    height: 100%
 }
 
-.image {
+ .image {
   position: absolute;
   opacity: 0;
   width: 100%;
   transition: opacity 1s ease; 
-  /* transform: translate(0%, -10%); */
-  /* object-fit: cover; */
-}
+  /* transform: translate(0%, -10%);
+  object-fit: cover; */
+  height: 100%;
+  object-fit: cover;
+} 
 
 .active {
   opacity: 1;
+  position: absolute; 
   width: 100%;
   /* object-fit: cover; */
   transition: opacity 1s ease; 
   /* transform: translate(0%, -10%); */
+
+
+/* box-sizing: border-box; */
+
+height: 100%;
+
+/* min-height: 0; */
+/* overflow-y: hidden;
+overflow-x: hidden; */
+/* padding: 0; */
+/* z-index: 1; */
+object-fit: cover;
+
 }
 /* @keyframes slide {
   0% { transform: translateX(0); }
