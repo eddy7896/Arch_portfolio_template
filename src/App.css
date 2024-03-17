@@ -154,7 +154,9 @@ object-fit: cover;
   background-repeat: no-repeat;
   transform: translate(0%, -2%);
 }
-
+.test{
+  display: flex;
+}
 /* LOADING PAGE */
 
 .loading-page {

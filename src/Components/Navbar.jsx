@@ -12,12 +12,13 @@ const NavBar = ({ textEnter, textLeave }) => {
     const location = useLocation();
 
 
-    
+
 
 
 
     const handleCurriculumClick = () => {
         setCurriculumClicked(true);
+        textLeave()
     };
     useEffect(() => {
         if (location.pathname !== "/curriculum") {
@@ -48,12 +49,12 @@ const NavBar = ({ textEnter, textLeave }) => {
     }
     const handleCopyEmail = () => {
         navigator.clipboard.writeText("amcasep@gmail.com")
-        .then(() => {
-            console.log('Email copied to clipboard');
-        })
-        .catch(error => {
-            console.error('Error copying email to clipboard:', error);
-        });
+            .then(() => {
+                console.log('Email copied to clipboard');
+            })
+            .catch(error => {
+                console.error('Error copying email to clipboard:', error);
+            });
         handleContactClick()
     };
 
@@ -63,23 +64,18 @@ const NavBar = ({ textEnter, textLeave }) => {
             <Link to="/" className="home"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Home</h5></Link>
             <Link to="/projects"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Projects</h5></Link>
             {curriculumClicked ? (
-                <div className="">
-                    <IoCloudDownloadOutline onClick={handleDownload} />
+                <div onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                    <h5><IoCloudDownloadOutline onClick={handleDownload} /></h5>
                 </div>
             ) : (
                 <Link to="/curriculum" onClick={handleCurriculumClick}><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Curriculum</h5></Link>
             )}
             <Link to="/fotography"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Fotography</h5></Link>
             {displayEmail ? (
-                <h5 onClick={handleCopyEmail} onMouseEnter={textEnter} onMouseLeave={textLeave}>
-                    amcasep@gmail.com <FaRegCopy />
-                </h5>
+                <h5 onClick={handleCopyEmail} onMouseEnter={textEnter} onMouseLeave={textLeave}>amcasep@gmail.com <FaRegCopy /></h5>
             ) : (
-                <h5 onClick={handleContactClick} onMouseEnter={textEnter} onMouseLeave={textLeave}>
-                    Contact
-                </h5>
+                <h5 onClick={handleContactClick} onMouseEnter={textEnter} onMouseLeave={textLeave}>Contact</h5>
             )}
-
         </div>
     );
 }
