@@ -9,6 +9,7 @@ import Curriculum from './Components/Curriculum'
 import LoadingScreen from './Components/LoadingScreen'
 import Projects from './Components/Projects'
 import Fotography from './Components/Fotography'
+import P1 from './Components/Projects/P1'
 
 function App() {
 
@@ -85,6 +86,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<Projects/>} />
+          <Route path="/projects/p1" element={<P1 textEnter={textEnter} textLeave={textLeave}/>} />
           <Route path="/fotography" element={<Fotography/>} />
           <Route path="/curriculum" element={<Curriculum/>} />
         </Routes>
