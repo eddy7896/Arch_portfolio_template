@@ -140,25 +140,25 @@ overflow-x: hidden; */
 .Projects {
   margin-left: 250px;
   width: 100%;
-  /* overflow: hidden; */
-  background-color: rgb(193, 236, 236);
 }
 
 .projects-container {
-  /* display: grid; */
-  margin: 0;
-  padding: 0;
-  /* grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)); */
+  /* overflow: auto; */
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
   gap: 8px;
 }
 
 .projects-container img {
-  width: 20%;
+  width: 100%;
   height: 100%;
+  overflow: auto;
+  object-fit: cover;
 }
 
 /* PROJECTS SINGLE */
-.p1 {
+.singleProject {
   margin-left: 250px;
   width: 100%;
 }
