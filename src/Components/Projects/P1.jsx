@@ -10,6 +10,7 @@ import img5 from "../../projects/p1/5.jpg"
 import img6 from "../../projects/p1/6.jpg"
 import img7 from "../../projects/p1/7.jpg"
 import img8 from "../../projects/p1/8.jpg"
+import { useEffect } from "react";
 
 const P1 = ({ textEnter, textLeave }) => {
 
@@ -23,7 +24,9 @@ const P1 = ({ textEnter, textLeave }) => {
     const prevImage = () => {
         setCurrentImage(prev => (prev - 1 + images.length) % images.length);
     };
-
+    useEffect(() => {
+        textLeave()
+    }, [])
     return (
         <div className="singleProject">
             <div className="wrapper">

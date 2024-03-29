@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect  } from "react"
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -20,6 +20,9 @@ const P8 = ({ textEnter, textLeave }) => {
     const prevImage = () => {
         setCurrentImage(prev => (prev - 1 + images.length) % images.length);
     };
+    useEffect(() => {
+        textLeave()
+    }, [])
     return (
         <div className="singleProject">
         <div className="wrapper">

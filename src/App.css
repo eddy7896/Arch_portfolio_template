@@ -150,11 +150,234 @@ overflow-x: hidden; */
   gap: 8px;
 }
 
+.projects-container a {
+  overflow: hidden;
+  color: black;
+  cursor: none;
+}
+
 .projects-container img {
   width: 100%;
   height: 100%;
-  overflow: auto;
   object-fit: cover;
+}
+.projects-container h2 {
+  color: #2e2e2e;
+}
+.p1 {
+  overflow: hidden;
+  position: relative;
+}
+
+.p1Info {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #ffffff71;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.p1:hover .p1Info {
+  right: 0
+}
+
+.p2 {
+  overflow: hidden;
+  position: relative;
+}
+
+.p2Info {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #ffffff71;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.p2:hover .p2Info {
+  right: 0
+}
+
+.p3 {
+  overflow: hidden;
+  position: relative;
+}
+
+.p3Info {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #ffffff71;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.p3:hover .p3Info {
+  right: 0
+}
+
+.p4 {
+  overflow: hidden;
+  position: relative;
+}
+
+.p4Info {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #ffffff71;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.p4:hover .p4Info {
+  right: 0
+}
+
+.p5 {
+  overflow: hidden;
+  position: relative;
+}
+
+.p5Info {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #ffffff71;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.p5:hover .p5Info {
+  right: 0
+}
+
+.p6 {
+  overflow: hidden;
+  position: relative;
+}
+
+.p6Info {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #ffffff71;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.p6:hover .p6Info {
+  right: 0
+}
+
+.p7 {
+  overflow: hidden;
+  position: relative;
+}
+
+.p7Info {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #ffffff71;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.p7:hover .p7Info {
+  right: 0
+}
+
+.p8 {
+  overflow: hidden;
+  position: relative;
+}
+
+.p8Info {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #ffffff71;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.p8:hover .p8Info {
+  right: 0
+}
+
+.p9 {
+  overflow: hidden;
+  position: relative;
+}
+
+.p9Info {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #ffffff71;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.p9:hover .p9Info {
+  right: 0
 }
 
 /* PROJECTS SINGLE */
@@ -183,12 +406,13 @@ overflow-x: hidden; */
   cursor: none;
   transition: 0.5s;
 }
-.wrapper button:hover{
+
+.wrapper button:hover {
   color: rgb(231, 216, 208);
   transform: translateX(7px);
 }
 
- 
+
 /* CURRICULUM */
 .curriculum {
   margin-left: 250px;

@@ -95,7 +95,7 @@ function App() {
        
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<Projects/>} />
+          <Route path="/projects" element={<Projects textEnter={textEnter} textLeave={textLeave}/>} />
           <Route path="/projects/p1" element={<P1 textEnter={textEnter} textLeave={textLeave}/>} />
           <Route path="/projects/p2" element={<P2 textEnter={textEnter} textLeave={textLeave}/>} />
           <Route path="/projects/p3" element={<P3 textEnter={textEnter} textLeave={textLeave}/>} />
