@@ -70,8 +70,8 @@ const NavBar = ({ textEnter, textLeave }) => {
                 <Link to="/" className="home"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Home</h5></Link>
                 <Link to="/projects"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Projects</h5></Link>
                 {curriculumClicked ? (
-                    <div onMouseEnter={textEnter} onMouseLeave={textLeave}>
-                        <h5><IoCloudDownloadOutline onClick={handleDownload} /></h5>
+                    <div   onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                        <h5 className="downloadIcon"><IoCloudDownloadOutline onClick={handleDownload} /></h5>
                     </div>
                 ) : (
                     <Link to="/curriculum" onClick={handleCurriculumClick}><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Curriculum</h5></Link>
@@ -99,7 +99,7 @@ const NavBar = ({ textEnter, textLeave }) => {
                         <Link to="/projects"><h5>Projects</h5></Link>
                         {curriculumClicked ? (
                             <div>
-                                <h5><IoCloudDownloadOutline onClick={handleDownload} /></h5>
+                                <h5 ><IoCloudDownloadOutline onClick={handleDownload} /></h5>
                             </div>
                         ) : (
                             <Link to="/curriculum" onClick={handleCurriculumClick}><h5>Curriculum</h5></Link>

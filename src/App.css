@@ -32,9 +32,11 @@
   height: 95vh;
   overflow-y: auto;
 }
+
 .container::-webkit-scrollbar {
   display: none;
 }
+
 /* NAVBAR */
 
 .NavBar2 {
@@ -97,6 +99,10 @@
 
 .home {
   padding-bottom: 5px;
+}
+
+.downloadIcon {
+  font-size: 20px;
 }
 
 /* HOME PAGE */
@@ -386,6 +392,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .wrapper {
@@ -420,12 +427,33 @@
 .curriculum {
   margin-left: 250px;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   /* background-color: rgb(221, 204, 159, 0.3); */
-  background-image: url("./images/Lebenslauf.jpg");
+  /* background-image: url("./images/Lebenslauf.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  transform: translate(0%, -2%);
+  background-repeat: no-repeat; */
+  /* transform: translate(0%, -2%); */
+}
+
+.cv-container {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.cv-container img {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1400px) {
+  .cv-container {
+    flex-direction: column;
+    justify-content:start
+  }
+
+  .curriculum::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* FOTOGRAPHY */
@@ -504,18 +532,23 @@
   body {
     cursor: default;
   }
+
   .cursor {
     display: none;
   }
-  .laggedCursor{
+
+  .laggedCursor {
     display: none;
   }
-  .projects-container a{
+
+  .projects-container a {
     cursor: pointer;
   }
-  .wrapper button{
+
+  .wrapper button {
     cursor: pointer;
   }
+
   .NavBar {
     display: none;
   }
@@ -529,19 +562,23 @@
     margin-left: 2.5vh;
     margin-top: 7.5vh;
   }
+
   .singleProject {
     margin-left: 2.5vh;
     margin-top: 7.5vh;
   }
+
   .curriculum {
     margin-left: 2.5vh;
     margin-top: 7.5vh;
   }
+
   .Fotography {
     margin-left: 2.5vh;
     margin-top: 7.5vh;
-  
+
   }
+
   .NavBar2 {
     position: fixed;
     top: 0;
@@ -692,39 +729,65 @@
   #menuToggle input:checked~#menu {
     top: 10%;
   }
-  
+
+  .wrapper button:hover {
+    transform: none;
+    color: black;
+  }
 }
 
 @media screen and (max-width: 500px) {
-.p1Info {
+  .p1Info {
     font-size: 12px;
   }
+
   .p2Info {
     font-size: 12px;
   }
+
   .p3Info {
     font-size: 12px;
   }
+
   .p4Info {
     font-size: 12px;
   }
+
   .p5Info {
     font-size: 12px;
   }
+
   .p6Info {
     font-size: 12px;
   }
+
   .p7Info {
     font-size: 12px;
   }
+
   .p8Info {
     font-size: 12px;
   }
+
   .p9Info {
     font-size: 12px;
   }
+
   .projects-container {
     display: flex;
     flex-direction: column;
+  }
+
+  .wrapper {
+    gap: 15px;
+  }
+
+  .wrapper button {
+    font-size: 2em;
+  }
+
+  .wrapper button:hover {
+    transform: none;
+    color: black;
   }
 }
