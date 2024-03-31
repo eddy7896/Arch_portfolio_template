@@ -9,11 +9,13 @@ const NavBar = ({ textEnter, textLeave }) => {
 
     const [displayEmail, setDisplayEmail] = useState(false);
     const [curriculumClicked, setCurriculumClicked] = useState(false);
+    const [inputChecked, setInputChecked] = useState(false);
     const location = useLocation();
 
 
-
-
+    useEffect(() => {
+        setInputChecked(false);
+    }, [location]);
 
 
     const handleCurriculumClick = () => {
@@ -58,25 +60,63 @@ const NavBar = ({ textEnter, textLeave }) => {
         handleContactClick()
     };
 
+
+
+
     return (
-        <div className="NavBar">
-            <img src={logo} />
-            <Link to="/" className="home"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Home</h5></Link>
-            <Link to="/projects"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Projects</h5></Link>
-            {curriculumClicked ? (
-                <div onMouseEnter={textEnter} onMouseLeave={textLeave}>
-                    <h5><IoCloudDownloadOutline onClick={handleDownload} /></h5>
+        <>
+            <div className="NavBar">
+                <img src={logo} />
+                <Link to="/" className="home"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Home</h5></Link>
+                <Link to="/projects"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Projects</h5></Link>
+                {curriculumClicked ? (
+                    <div onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                        <h5><IoCloudDownloadOutline onClick={handleDownload} /></h5>
+                    </div>
+                ) : (
+                    <Link to="/curriculum" onClick={handleCurriculumClick}><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Curriculum</h5></Link>
+                )}
+                <Link to="/fotography"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Fotography</h5></Link>
+                {displayEmail ? (
+                    <h5 onClick={handleCopyEmail} onMouseEnter={textEnter} onMouseLeave={textLeave}>amcasep@gmail.com <FaRegCopy /></h5>
+                ) : (
+                    <h5 onClick={handleContactClick} onMouseEnter={textEnter} onMouseLeave={textLeave}>Contact</h5>
+                )}
+
+
+            </div>
+
+            <div className="NavBar2">
+                <img src={logo} />
+
+                <div id="menuToggle" onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                    <input type="checkbox" checked={inputChecked} onChange={() => setInputChecked(!inputChecked)} />
+                    <span className="line1"></span>
+                    <span className="line2"></span>
+                    <span className="line3"></span>
+                    <div id="menu">
+                        <Link to="/" ><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Home</h5></Link>
+                        <Link to="/projects"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Projects</h5></Link>
+                        {curriculumClicked ? (
+                            <div onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                                <h5><IoCloudDownloadOutline onClick={handleDownload} /></h5>
+                            </div>
+                        ) : (
+                            <Link to="/curriculum" onClick={handleCurriculumClick}><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Curriculum</h5></Link>
+                        )}
+                        <Link to="/fotography"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Fotography</h5></Link>
+                        {displayEmail ? (
+                            <h5 onClick={handleCopyEmail} onMouseEnter={textEnter} onMouseLeave={textLeave}>amcasep@gmail.com <FaRegCopy /></h5>
+                        ) : (
+                            <h5 onClick={handleContactClick} onMouseEnter={textEnter} onMouseLeave={textLeave}>Contact</h5>
+                        )}
+                    </div>
                 </div>
-            ) : (
-                <Link to="/curriculum" onClick={handleCurriculumClick}><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Curriculum</h5></Link>
-            )}
-            <Link to="/fotography"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Fotography</h5></Link>
-            {displayEmail ? (
-                <h5 onClick={handleCopyEmail} onMouseEnter={textEnter} onMouseLeave={textLeave}>amcasep@gmail.com <FaRegCopy /></h5>
-            ) : (
-                <h5 onClick={handleContactClick} onMouseEnter={textEnter} onMouseLeave={textLeave}>Contact</h5>
-            )}
-        </div>
+
+
+
+            </div>
+        </>
     );
 }
 

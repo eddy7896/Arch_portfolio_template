@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -10,7 +10,6 @@ import img5 from "../../projects/p1/5.jpg"
 import img6 from "../../projects/p1/6.jpg"
 import img7 from "../../projects/p1/7.jpg"
 import img8 from "../../projects/p1/8.jpg"
-import { useEffect } from "react";
 
 const P1 = ({ textEnter, textLeave }) => {
 

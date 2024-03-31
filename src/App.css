@@ -34,6 +34,14 @@
 
 /* NAVBAR */
 
+.NavBar2 {
+  display: none;
+}
+
+#menu {
+  display: none;
+}
+
 .NavBar {
   position: fixed;
   bottom: 2.5vh;
@@ -93,16 +101,10 @@
   margin-left: 250px;
   width: 100%;
   overflow: hidden;
-  /* background-image: url("./images/img1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat; */
 }
 
 .carousel-container {
   position: relative;
-  /* display: block; */
-  /* transition: transform 1s ease; */
-  /* animation: slide 15s linear infinite  */
   width: auto;
   height: 100%
 }
@@ -112,8 +114,6 @@
   opacity: 0;
   width: 100%;
   transition: opacity 1s ease;
-  /* transform: translate(0%, -10%);
-  object-fit: cover; */
   height: 100%;
   object-fit: cover;
 }
@@ -122,18 +122,9 @@
   opacity: 1;
   position: absolute;
   width: 100%;
-  /* object-fit: cover; */
   transition: opacity 1s ease;
-  /* transform: translate(0%, -10%); */
-  /* box-sizing: border-box; */
   height: 100%;
-  /* min-height: 0; */
-  /* overflow-y: hidden;
-overflow-x: hidden; */
-  /* padding: 0; */
-  /* z-index: 1; */
   object-fit: cover;
-
 }
 
 /* PROJECTS MAIN*/
@@ -161,9 +152,11 @@ overflow-x: hidden; */
   height: 100%;
   object-fit: cover;
 }
+
 .projects-container h2 {
   color: #2e2e2e;
 }
+
 .p1 {
   overflow: hidden;
   position: relative;
@@ -384,18 +377,22 @@ overflow-x: hidden; */
 .singleProject {
   margin-left: 250px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 80%;
+  width: 70%;
   gap: 20px;
 }
 
 .wrapper img {
-  width: 60%;
+  width: 100%;
 }
 
 .wrapper button {
@@ -493,4 +490,194 @@ overflow-x: hidden; */
   letter-spacing: 1px;
   color: #3d3d3d;
   text-transform: uppercase;
+}
+
+/*//////////////////////MEDIA QUERIES////////////////////*/
+
+@media screen and (max-width: 768px) {
+  body {
+    cursor: default;
+  }
+  .cursor {
+    display: none;
+  }
+  .laggedCursor{
+    display: none;
+  }
+  .NavBar {
+    display: none;
+  }
+
+  .img-container {
+    margin-left: 2.5vh;
+    margin-top: 7.5vh;
+  }
+
+  .Projects {
+    margin-left: 2.5vh;
+    margin-top: 7.5vh;
+  }
+  .singleProject {
+    margin-left: 2.5vh;
+    margin-top: 7.5vh;
+  }
+  .curriculum {
+    margin-left: 2.5vh;
+    margin-top: 7.5vh;
+  }
+  .Fotography {
+    margin-left: 2.5vh;
+    margin-top: 7.5vh;
+  
+  }
+  .NavBar2 {
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9995;
+    background-color: white;
+  }
+
+  .NavBar2 img {
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 2.5vh;
+  }
+
+  #menuToggle {
+    margin-right: 2.5vh;
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+  }
+
+  #menuToggle li {
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle li:hover {
+    color: rgb(231, 216, 208);
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: none;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-top: 6px;
+    position: relative;
+
+    background: #000000;
+    border-radius: 3px;
+  }
+
+  #menuToggle .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  #menuToggle .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  #menuToggle .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  #menuToggle input:checked~.line1 {
+    transform: rotate(45deg);
+  }
+
+  #menuToggle input:checked~.line2 {
+    transform: scaleY(0);
+  }
+
+  #menuToggle input:checked~.line3 {
+    transform: rotate(-45deg);
+  }
+
+  #menu {
+    position: fixed;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%);
+
+    top: -200px;
+    /* Start with the menu off-screen to the right */
+    width: 100%;
+
+    transition: top 0.3s ease-out;
+    /* Add a transition to the right property */
+    z-index: 9995;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 25px 0;
+  }
+
+  #menu a {
+    text-decoration: none;
+    color: black;
+    cursor: none;
+  }
+
+  #menu h5 {
+    transition: 0.5s ease-in-out;
+    padding-bottom: 0.3rem;
+  }
+
+  #menu h5::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: rgb(231, 216, 208);
+    transition: width 0.25s ease-in-out;
+  }
+
+  #menu h5:hover::before {
+    width: 100%;
+  }
+
+  #menu h5:hover {
+    color: rgb(231, 216, 208);
+    transform: translateX(7px);
+  }
+
+  #menuToggle input:checked~#menu {
+    top: 10%;
+  }
 }
