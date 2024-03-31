@@ -89,26 +89,26 @@ const NavBar = ({ textEnter, textLeave }) => {
             <div className="NavBar2">
                 <img src={logo} />
 
-                <div id="menuToggle" onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                <div id="menuToggle">
                     <input type="checkbox" checked={inputChecked} onChange={() => setInputChecked(!inputChecked)} />
                     <span className="line1"></span>
                     <span className="line2"></span>
                     <span className="line3"></span>
                     <div id="menu">
-                        <Link to="/" ><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Home</h5></Link>
-                        <Link to="/projects"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Projects</h5></Link>
+                        <Link to="/" ><h5>Home</h5></Link>
+                        <Link to="/projects"><h5>Projects</h5></Link>
                         {curriculumClicked ? (
-                            <div onMouseEnter={textEnter} onMouseLeave={textLeave}>
+                            <div>
                                 <h5><IoCloudDownloadOutline onClick={handleDownload} /></h5>
                             </div>
                         ) : (
-                            <Link to="/curriculum" onClick={handleCurriculumClick}><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Curriculum</h5></Link>
+                            <Link to="/curriculum" onClick={handleCurriculumClick}><h5>Curriculum</h5></Link>
                         )}
-                        <Link to="/fotography"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Fotography</h5></Link>
+                        <Link to="/fotography"><h5>Fotography</h5></Link>
                         {displayEmail ? (
-                            <h5 onClick={handleCopyEmail} onMouseEnter={textEnter} onMouseLeave={textLeave}>amcasep@gmail.com <FaRegCopy /></h5>
+                            <h5 onClick={handleCopyEmail}>amcasep@gmail.com <FaRegCopy /></h5>
                         ) : (
-                            <h5 onClick={handleContactClick} onMouseEnter={textEnter} onMouseLeave={textLeave}>Contact</h5>
+                            <h5 onClick={handleContactClick}>Contact</h5>
                         )}
                     </div>
                 </div>

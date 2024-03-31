@@ -504,6 +504,12 @@
   .laggedCursor{
     display: none;
   }
+  .projects-container a{
+    cursor: pointer;
+  }
+  .wrapper button{
+    cursor: pointer;
+  }
   .NavBar {
     display: none;
   }
@@ -578,7 +584,7 @@
     position: absolute;
     top: -7px;
     left: -5px;
-    cursor: none;
+    cursor: pointer;
     opacity: 0;
     /* hide this */
     z-index: 2;
@@ -649,7 +655,7 @@
   #menu a {
     text-decoration: none;
     color: black;
-    cursor: none;
+    cursor: pointer;
   }
 
   #menu h5 {
@@ -657,7 +663,7 @@
     padding-bottom: 0.3rem;
   }
 
-  #menu h5::before {
+  /* #menu h5::before {
     content: "";
     position: absolute;
     left: 0;
@@ -675,7 +681,7 @@
   #menu h5:hover {
     color: rgb(231, 216, 208);
     transform: translateX(7px);
-  }
+  } */
 
   #menuToggle input:checked~#menu {
     top: 10%;
