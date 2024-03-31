@@ -131,10 +131,11 @@
 .Projects {
   margin-left: 250px;
   width: 100%;
+  overflow: hidden;
 }
 
 .projects-container {
-  /* overflow: auto; */
+  overflow: hidden;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
