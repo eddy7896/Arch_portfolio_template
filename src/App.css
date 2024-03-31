@@ -161,6 +161,7 @@
 .p1 {
   overflow: hidden;
   position: relative;
+
 }
 
 .p1Info {
@@ -176,6 +177,7 @@
   align-items: center;
   flex-direction: column;
   transition: 1s;
+
 }
 
 .p1:hover .p1Info {
@@ -686,5 +688,40 @@
 
   #menuToggle input:checked~#menu {
     top: 10%;
+  }
+  
+}
+
+@media screen and (max-width: 500px) {
+.p1Info {
+    font-size: 12px;
+  }
+  .p2Info {
+    font-size: 12px;
+  }
+  .p3Info {
+    font-size: 12px;
+  }
+  .p4Info {
+    font-size: 12px;
+  }
+  .p5Info {
+    font-size: 12px;
+  }
+  .p6Info {
+    font-size: 12px;
+  }
+  .p7Info {
+    font-size: 12px;
+  }
+  .p8Info {
+    font-size: 12px;
+  }
+  .p9Info {
+    font-size: 12px;
+  }
+  .projects-container {
+    display: flex;
+    flex-direction: column;
   }
 }
