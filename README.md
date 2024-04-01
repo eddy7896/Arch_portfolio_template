@@ -1,4 +1,6 @@
-<h2>Architecture Portfolio</h2>
+<h1>Architecture Portfolio</h1>
+
+<h2>Description</h2>
 
 This website showcases my architectural projects developed in Leipzig over the past years during my experience as an architect in Germany.
 You can have a look to it <a href="https://architecture-portfolio.netlify.app">here</a>
