@@ -42,7 +42,7 @@ A modern, responsive web application showcasing architectural projects, designed
    ```
 3. Run the development server:
    ```
-   npm start
+   npm run dev
    ```
 
 ## Development
