@@ -50,7 +50,7 @@ const NavBar = ({ textEnter, textLeave }) => {
         setDisplayEmail(!displayEmail);
     }
     const handleCopyEmail = () => {
-        navigator.clipboard.writeText("amcasep@gmail.com")
+        navigator.clipboard.writeText("contact@email.com")
             .then(() => {
                 console.log('Email copied to clipboard');
             })
@@ -66,7 +66,7 @@ const NavBar = ({ textEnter, textLeave }) => {
     return (
         <>
             <div className="NavBar">
-                <img src={logo} />
+                <Link to="/"><img src={logo} /></Link>
                 <Link to="/" className="home"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave}>Home</h5></Link>
                 <Link to="/projects"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Projects</h5></Link>
                 {curriculumClicked ? (
@@ -74,11 +74,11 @@ const NavBar = ({ textEnter, textLeave }) => {
                         <h5 className="downloadIcon"><IoCloudDownloadOutline onClick={handleDownload} /></h5>
                     </div>
                 ) : (
-                    <Link to="/curriculum" onClick={handleCurriculumClick}><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Curriculum</h5></Link>
+                    <Link to="/curriculum" onClick={handleCurriculumClick}><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >About</h5></Link>
                 )}
-                <Link to="/fotography"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Fotography</h5></Link>
+                <Link to="/fotography"><h5 onMouseEnter={textEnter} onMouseLeave={textLeave} >Gallery</h5></Link>
                 {displayEmail ? (
-                    <h5 onClick={handleCopyEmail} onMouseEnter={textEnter} onMouseLeave={textLeave}>amcasep@gmail.com <FaRegCopy /></h5>
+                    <h5 onClick={handleCopyEmail} onMouseEnter={textEnter} onMouseLeave={textLeave}>contact@email.com <FaRegCopy /></h5>
                 ) : (
                     <h5 onClick={handleContactClick} onMouseEnter={textEnter} onMouseLeave={textLeave}>Contact</h5>
                 )}
@@ -87,7 +87,7 @@ const NavBar = ({ textEnter, textLeave }) => {
             </div>
 
             <div className="NavBar2">
-                <img src={logo} />
+                <Link to="/"><img src={logo} /></Link>
 
                 <div id="menuToggle">
                     <input type="checkbox" checked={inputChecked} onChange={() => setInputChecked(!inputChecked)} />
@@ -102,11 +102,11 @@ const NavBar = ({ textEnter, textLeave }) => {
                                 <h5 ><IoCloudDownloadOutline onClick={handleDownload} /></h5>
                             </div>
                         ) : (
-                            <Link to="/curriculum" onClick={handleCurriculumClick}><h5>Curriculum</h5></Link>
+                            <Link to="/curriculum" onClick={handleCurriculumClick}><h5>About</h5></Link>
                         )}
                         <Link to="/fotography"><h5>Fotography</h5></Link>
                         {displayEmail ? (
-                            <h5 onClick={handleCopyEmail}>amcasep@gmail.com <FaRegCopy /></h5>
+                            <h5 onClick={handleCopyEmail}>contact@email.com <FaRegCopy /></h5>
                         ) : (
                             <h5 onClick={handleContactClick}>Contact</h5>
                         )}

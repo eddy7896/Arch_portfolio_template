@@ -19,9 +19,9 @@ const Projects = ({ textEnter, textLeave }) => {
                     <img loading="lazy" src={img1} alt="photo" />
                     <Link to={'/projects/p1'} onMouseEnter={textEnter} onMouseLeave={textLeave}>
                         <div className="p1Info">
-                            <h2>Gepflegtes Stadtwohnen in Magdeburg</h2>
-                            <h4>Wettbewerb</h4>
-                            <p>1. Preis</p>
+                            <h2>Project 1 details</h2>
+                            <h4>Project 1 details</h4>
+                            <p>Project 1 details</p>
                         </div>
                     </Link>
                 </div>
@@ -29,9 +29,9 @@ const Projects = ({ textEnter, textLeave }) => {
                     <img loading="lazy" src={img2} alt="photo" />
                     <Link to={'/projects/p2'} onMouseEnter={textEnter} onMouseLeave={textLeave}>
                         <div className="p2Info">
-                            <h2>Erweiterung Berufsschule Eichstätt</h2>
-                            <h4>Wettbewerb</h4>
-                            <p>2. Preis</p>
+                            <h2>Project 2 details</h2>
+                            <h4>Project 2 details</h4>
+                            <p>Project 2 details</p>
                         </div>
                     </Link>
                 </div>
@@ -39,8 +39,8 @@ const Projects = ({ textEnter, textLeave }) => {
                     <img loading="lazy" src={img3} alt="photo" />
                     <Link to={'/projects/p3'} onMouseEnter={textEnter} onMouseLeave={textLeave}>
                         <div className="p3Info">
-                            <h2>Privates Wohnhaus in Mallorca</h2>
-                            <h4>Wettbewerb</h4>
+                            <h2>Project 3 details</h2>
+                            <h4>Project 3 details</h4>
                         </div>
                     </Link>
                 </div>
@@ -48,8 +48,8 @@ const Projects = ({ textEnter, textLeave }) => {
                     <img loading="lazy" src={img4} alt="photo" />
                     <Link to={'/projects/p4'} onMouseEnter={textEnter} onMouseLeave={textLeave}>
                         <div className="p4Info">
-                            <h2>Kleisthof Wohnkomplex mit Tiefgarage</h2>
-                            <h4>LP 1-4</h4>
+                            <h2>Project 4 details</h2>
+                            <h4>Project 4 details</h4>
                         </div>
                     </Link>
                 </div>
@@ -57,8 +57,8 @@ const Projects = ({ textEnter, textLeave }) => {
                     <img loading="lazy" src={img5} alt="photo" />
                     <Link to={'/projects/p5'} onMouseEnter={textEnter} onMouseLeave={textLeave}>
                         <div className="p5Info">
-                            <h2>4 Wohngebäude am Rosental</h2>
-                            <h4>LP 1-4</h4>
+                            <h2>Project 5 details</h2>
+                            <h4>Project 5 details</h4>
                         </div>
                     </Link>
                 </div>
@@ -66,8 +66,8 @@ const Projects = ({ textEnter, textLeave }) => {
                     <img loading="lazy" src={img6} alt="photo" />
                     <Link to={'/projects/p6'} onMouseEnter={textEnter} onMouseLeave={textLeave}>
                         <div className="p6Info">
-                            <h2>Konsumgenossenschaft Leipzig</h2>
-                            <h4>LP 1-4</h4>
+                            <h2>Project 6 details</h2>
+                            <h4>Project 6 details</h4>
                         </div>
                     </Link>
                 </div>
@@ -75,8 +75,8 @@ const Projects = ({ textEnter, textLeave }) => {
                     <img loading="lazy" src={img7} alt="photo" />
                     <Link to={'/projects/p7'} onMouseEnter={textEnter} onMouseLeave={textLeave}>
                         <div className="p7Info">
-                            <h2>Büro- und Laborgebäude BioCampus</h2>
-                            <h4>LP 3-5</h4>
+                            <h2>Project 7 details</h2>
+                            <h4>Project 7 details</h4>
                         </div>
                     </Link>
                 </div>
@@ -84,8 +84,8 @@ const Projects = ({ textEnter, textLeave }) => {
                     <img loading="lazy" src={img8} alt="photo" />
                     <Link to={'/projects/p8'} onMouseEnter={textEnter} onMouseLeave={textLeave}>
                         <div className="p8Info">
-                            <h2>Bürogebäude Berliner Straße</h2>
-                            <h4>LP 3-4</h4>
+                            <h2>Project 8 details</h2>
+                            <h4>Project 8 details</h4>
                         </div>
                     </Link>
                 </div>
@@ -93,8 +93,8 @@ const Projects = ({ textEnter, textLeave }) => {
                     <img loading="lazy" src={img9} alt="photo" />
                     <Link to={'/projects/p9'} onMouseEnter={textEnter} onMouseLeave={textLeave}>
                         <div className="p9Info">
-                            <h2>Mehrfamilienhäuser Glücksburg </h2>
-                            <h4>LP 5</h4>
+                            <h2>Project 9 details</h2>
+                            <h4>Project 9 details</h4>
                         </div>
                     </Link>
                 </div>

@@ -1,10 +1,57 @@
-<h1>Architecture Portfolio</h1>
+# Architecture Portfolio
 
-<h2>Description</h2>
+## Overview
 
-This website showcases my architectural projects developed in Leipzig over the past years during my experience as an architect in Germany.
-You can have a look at it <a href="https://architecture-portfolio.netlify.app">here</a>
+A modern, responsive web application showcasing architectural projects, designed to provide an immersive and interactive experience for exploring professional architectural work.
 
-<h2>Technologies</h2>
+## Features
 
-ReactJS | Css
+- **Responsive Design**: Fully adaptive layout across different devices and screen sizes
+- **Interactive Project Gallery**: 
+  - Hover effects for project previews
+  - Detailed project information on interaction
+- **Smooth Navigation**: 
+  - Intuitive sidebar navigation
+  - Hover-based interactions
+- **Dynamic Loading Screen**: 
+  - Typewriter effect for engaging introduction
+  - Custom footer with developer credit
+
+## Technologies
+
+- **Frontend**: React.js
+- **Routing**: React Router
+- **Styling**: CSS
+- **Animation**: react-simple-typewriter
+
+## Project Structure
+
+- `src/Components/`: React components
+  - `Navbar.jsx`: Navigation component
+  - `LoadingScreen.jsx`: Initial loading screen
+  - `Projects.jsx`: Project gallery component
+- `src/projects/`: Project images
+- `src/App.css`: Global styling
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Run the development server:
+   ```
+   npm start
+   ```
+
+## Development
+
+Developed with a focus on:
+- Clean, maintainable code
+- Responsive design
+- Smooth user experience
+
+## Contact
+
+Developed by Faheem
